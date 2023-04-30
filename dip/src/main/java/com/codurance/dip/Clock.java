@@ -1,9 +1,6 @@
 package com.codurance.dip;
-
 import java.time.MonthDay;
 
-public class Clock {
-    public MonthDay monthDay(){
-        return MonthDay.now();
-    }
+public interface Clock {
+    public MonthDay monthDay();
 }

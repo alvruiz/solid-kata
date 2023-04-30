@@ -1,7 +1,15 @@
 package com.codurance.dip;
 
-public class EmailSender {
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class EmailSender implements Notificator {
+
+    private final Formatter formatter;
+    public EmailSender(Formatter formatter){
+        this.formatter = formatter;
+    }
     public void send(Email email) {
-        System.out.print("To:"+email.getTo()+", Subject: "+email.getSubject()+", Message: "+email.getMessage());
+        formatter.format("To:%s, Subject:%s, Message: %s",new ArrayList<>(Arrays.asList(email.getTo(),email.getSubject(),email.getSubject())));
     }
 }

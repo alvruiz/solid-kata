@@ -24,7 +24,7 @@ public class BirthdayGreeterShould {
     @Mock
     private EmployeeRepository employeeRepository;
     @Mock
-    private Clock clock;
+    private BirthdayClock clock;
 
     @InjectMocks
     private BirthdayGreeter birthdayGreeter;
